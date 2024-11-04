@@ -1,0 +1,15 @@
+<div>
+  <h1>Upcoming Movies</h1>
+</div>
+
+<div class="movies-container"></div>
+<ul>
+  <% upcomingMovies.forEach(movie => { %>
+    <div class="movie-card">
+    <li>
+      <h2><a href="/movie/<%= movie.id %>"><%= movie.title %></a></h2>
+      <p><%= movie.description %></p>
+    </li>
+  </div>
+  <% }) %>
+</ul>

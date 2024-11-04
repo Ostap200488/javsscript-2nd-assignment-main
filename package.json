@@ -1,0 +1,22 @@
+{
+  "name": "movie-collection",
+  "version": "1.0.0",
+  "description": "Allows the user to browse a collection of movies",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch index.js",
+    "test": "mocha 'tests/**/*.js'"
+  },
+  "author": "Matthew English",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-ejs-layouts": "^2.5.1",
+    "jest": "^29.7.0"
+  },
+  "devDependencies": {
+    "chai": "^5.1.2",
+    "mocha": "^10.8.2"
+  }
+}

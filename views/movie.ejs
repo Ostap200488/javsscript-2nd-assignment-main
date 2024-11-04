@@ -1,0 +1,74 @@
+<div class="movie-card">
+  <h1><%= movie.title %></h1>
+  <p><strong>Release Year:</strong> <%= movie.releaseYear %></p>
+  <p><strong>Description:</strong> <%= movie.description %></p>
+  <p><strong>Director:</strong> <%= movie.director %></p>
+  <p><strong>Rating:</strong> <%= movie.rating %></p>
+  <p><strong>Genre:</strong> <%= movie.genre %></p>
+
+  <h3>Recommended Movies</h3>
+  <ul>
+    <% recommendations.forEach(rec => { %>
+      <li><a href="/movie/<%= rec.id %>"><%= rec.title %></a></li>
+    <% }) %>
+  </ul>
+</div>
+
+<style>
+
+
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: #555;
+}
+
+
+.movie-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+ul li a:hover {
+  color: #0056b3;
+}
+
+
+@media (max-width: 600px) {
+  h1 {
+      font-size: 24px;
+  }
+
+  h3 {
+      font-size: 20px;
+  }
+
+  .movie-card {
+      padding: 15px;
+  }
+}
+
+</style>

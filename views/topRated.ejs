@@ -1,0 +1,15 @@
+<% include('partials/header') %>
+<div>
+    <h1>Top Rated Movies</h1>
+</div>
+<div class="movies-container">
+
+  <% topRatedMovies.forEach(movie => { %>
+    <div class="movie-card">
+      <h2><a href="/movie/<%= movie.id %>"><%= movie.title %></a></h2>
+      <p><%= movie.description %></p>
+      <p>Rating: <%= movie.rating %></p>
+    </div>
+  <% }) %>
+</div>
+<% include('partials/footer') %>

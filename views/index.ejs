@@ -1,0 +1,50 @@
+<div class="gallery-header">
+    <img src="/poster.png" alt="Movie Gallery Background" class="gallery-image">
+    <h1>Movie Gallery</h1>
+</div>
+<div class="movies-container">
+    <% movies.forEach(movie => { %>
+      <div class="movie-card">
+        <h2><a href="/movie/<%= movie.id %>"><%= movie.title %></a></h2>
+        <p><%= movie.description %></p>
+      </div>
+    <% }) %>
+</div>
+<style>.gallery-header {
+    position: relative;
+    text-align: center;
+    min-height: 250px; 
+    overflow: hidden; 
+}
+
+.gallery-image {
+    width: 100%; 
+    height: auto;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.gallery-header h1 {
+    position: relative; 
+    z-index: 1; 
+    color: #fff;
+    margin: 0; 
+    padding: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+
+
+
+
+
+
+
+
+</style>
